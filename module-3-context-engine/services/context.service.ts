@@ -23,9 +23,9 @@ export class ContextService {
         });
 
         return {
-            ip: input.network || '0.0.0.0',
-            location: input.location || 'Unknown',
-            networkTrust: 'UNKNOWN',
+            ip: input.network.ipAddress,
+            location: `${input.location.city}, ${input.location.countryCode}`,
+            networkTrust: netResult.riskLevel === 'NEGLIGIBLE' || netResult.riskLevel === 'LOW' ? 'TRUSTED' : 'UNTRUSTED',
             timestamp: new Date().toISOString(),
             anomaliesDetected: anomalies,
             riskDetails: {
