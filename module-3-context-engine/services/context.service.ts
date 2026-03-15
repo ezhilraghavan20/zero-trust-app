@@ -23,6 +23,10 @@ export class ContextService {
         });
 
         return {
+            ip: input.network || '0.0.0.0',
+            location: input.location || 'Unknown',
+            networkTrust: 'UNKNOWN',
+            timestamp: new Date().toISOString(),
             anomaliesDetected: anomalies,
             riskDetails: {
                 locationRisk: locResult.riskLevel,
