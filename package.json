@@ -8,7 +8,7 @@
     "dev:backend": "ts-node bootstrap.ts",
     "dev:frontend": "npm --prefix module-12-frontend run dev",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node dist/bootstrap.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +23,8 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "vite": "^8.0.0"
   }
 }
