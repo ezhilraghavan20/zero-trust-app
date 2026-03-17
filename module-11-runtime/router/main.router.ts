@@ -18,7 +18,12 @@ export class MainRouter {
      * Set up routes for the application.
      */
     public setupRoutes(app: any): void {
+        console.log('[Router] Registering health check routes');
         // Health check routes
+        app.get('/health', (req: any, res: any) => {
+            console.log('[Router] GET /health accessed');
+            return res.status(200).send('OK');
+        });
         app.get('/health/live', (req: any, res: any) => this.healthController.checkLiveness(req, res));
         app.get('/health/ready', (req: any, res: any) => this.healthController.checkReadiness(req, res));
 
