@@ -17,8 +17,11 @@ export class Server {
     public start(expressApp: any): void {
         this.appInstance.initialize(expressApp);
 
-        expressApp.listen(serverConfig.port, serverConfig.host, () => {
-            console.log(`[Runtime] Zero Trust Server started on http://${serverConfig.host}:${serverConfig.port}`);
+        const port = process.env.PORT || serverConfig.port || 3000;
+        const host = serverConfig.host || '0.0.0.0';
+
+        expressApp.listen(port, host, () => {
+            console.log(`[Runtime] Zero Trust Server started on http://${host}:${port}`);
         });
     }
 }
