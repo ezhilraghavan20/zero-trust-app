@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm --prefix modules/module-12-frontend install && npm --prefix modules/module-12-frontend run build && npx tsc",
+    "build": "npm --prefix module-12-frontend install && npm --prefix module-12-frontend run build && npx tsc",
     "start": "node dist/modules/module-11-runtime/server/server.js"
   },
   "keywords": [],
