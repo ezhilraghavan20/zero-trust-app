@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "dev:backend": "ts-node bootstrap.ts",
-    "dev:frontend": "npm --prefix module-12-frontend run dev",
-    "build": "tsc",
-    "start": "node dist/bootstrap.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cd modules/module-12-frontend && npm install && npm run build && cd ../.. && npx tsc",
+    "start": "node dist/modules/module-11-runtime/server/server.js"
   },
   "keywords": [],
   "author": "",
