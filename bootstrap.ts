@@ -1,5 +1,5 @@
 import express from 'express';
-import { Server } from './module-11-runtime/server';
+import { Server } from './modules/module-11-runtime/server';
 
 /**
  * Bootstrap script to start the Zero Trust Development Server.

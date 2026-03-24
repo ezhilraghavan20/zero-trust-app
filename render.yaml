@@ -3,7 +3,7 @@ services:
     name: zero-trust-app
     runtime: node
     buildCommand: npm run build
-    startCommand: node dist/module-11-runtime/server/server.js
+    startCommand: node dist/modules/module-11-runtime/server/server.js
     envVars:
       - key: NODE_ENV
         value: production
