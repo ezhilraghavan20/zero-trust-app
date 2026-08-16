@@ -1,0 +1,6 @@
+export enum ClientType {
+  WEB_APP = 'WEB_APP',
+  MOBILE_APP = 'MOBILE_APP',
+  MICROSERVICE = 'MICROSERVICE',
+  IOT_DEVICE = 'IOT_DEVICE'
+}

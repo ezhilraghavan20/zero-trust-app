@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: zero-trust-app
+    runtime: node
+    buildCommand: npm run build
+    startCommand: node dist/modules/module-11-runtime/server/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
